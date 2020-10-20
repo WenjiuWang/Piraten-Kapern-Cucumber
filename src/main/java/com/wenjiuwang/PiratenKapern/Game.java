@@ -464,7 +464,7 @@ public class Game {
 		        System.out.println("-----------------");
 		        
 				//check if reach 6000 points
-				if (this.players[playerNum].score >= 2000 || finalRounds <= 1) {
+				if (this.players[playerNum].score >= 6000 || finalRounds <= 1) {
 					finalRounds -= 1;
 				}
 				

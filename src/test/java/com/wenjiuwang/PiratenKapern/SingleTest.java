@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(tags = {"@tag55"})
+@CucumberOptions(tags = {"@tag38"})
 public class SingleTest {
 
 }
