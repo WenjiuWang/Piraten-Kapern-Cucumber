@@ -210,7 +210,7 @@ public class Game {
         }
         
         //Diamond & Gold.
-        score = DiamondGoldScore(dice) + SetsScore(dice);
+        score += DiamondGoldScore(dice) + SetsScore(dice);
 
 
         //Full chest bonus
