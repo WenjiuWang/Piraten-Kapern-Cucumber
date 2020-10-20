@@ -147,16 +147,16 @@ public class Player {
 						int [] pos = this.rerollDice(scan);
 						//Check if NON-SKULL is rolled
 						try {
-							boolean rolledSkull = true;
+							int rolledSkull = 0;
 							Gamedata gd = (Gamedata) this.inStream.readObject();
-				    		for (int i = 0; i < pos.length; ++i) {
+							for (int i = 0; i < pos.length; ++i) {
 								this.dice[pos[i]-1] = gd.data[pos[i]-1];
-				    			if (gd.data[pos[i]-1] != 6) {
-				    				rolledSkull = false;
-				    			}
-				    		}
-				    		if (rolledSkull) {
-								int [] empty = {};
+					    		if (gd.data[pos[i]-1] == 6) {
+					   				rolledSkull += 1;
+					   			}
+					   		}
+						    if (rolledSkull >= 1) {
+						   		int [] empty = {};
 				    			this.sendRequest(RequestCode.REROLL, empty);
 				    		} else {
 								this.sendRequest(RequestCode.END, this.dice);
