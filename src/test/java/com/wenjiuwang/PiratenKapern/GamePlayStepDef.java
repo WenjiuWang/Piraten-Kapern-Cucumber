@@ -24,7 +24,7 @@ public class GamePlayStepDef extends TestCase {
 	
 	Thread serverThread;
 
-	@Given("A {int} round game is running with rigged dice rolls {string}, fortune {string} and fortune indicator {string}")
+	@Given("A {int} turn game is running with rigged dice rolls {string}, fortune {string} and fortune indicator {string}")
 	public void the_server_is_running(int round, String roll, String fs, String indi) {
 		try {
 			ServerSocket s;
@@ -114,10 +114,6 @@ public class GamePlayStepDef extends TestCase {
 		}
 	}
 
-	@Then("Player {int} is dead")
-	public void player_is_dead(Integer int1) {
-	}
-	
 	@Then("Player {int} end current round and score")
 	public void player_end_current_round_and_score(Integer int1) {
 	    try {

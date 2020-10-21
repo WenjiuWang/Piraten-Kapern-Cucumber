@@ -5,7 +5,7 @@ Feature: LEVEL 2:  NETWORKED GAME TEST
 	Scenario: game starts, each player plays a turn with scores being updated correctly 
 	 						players play turns until a winner is declared
 	 					
-	Given A 9 round game is running with rigged dice rolls "6,6,3,3,4,4,5,5/5,2/3,3,3,4,4,4,6,2/4,4,4,5,5,1,1,2/4,4/6,2,4/3,3,3,3,5,4,4,2/2,5/3,3,4,2,2,1,1,1/6,6,4,2,2,1,1,1/6,6/0/3,6/0/2,2,2,2,2,2,2,2/6,6,6,4,4,5,5,5/5,5,5,5,5,5,5,5", fortune "3,7,1,4,7,8,5,5,2" and fortune indicator "0,0,0,2,0,2,0,0,0"
+	Given A 9 turn game is running with rigged dice rolls "6,6,3,3,4,4,5,5/5,2/3,3,3,4,4,4,6,2/4,4,4,5,5,1,1,2/4,4/6,2,4/3,3,3,3,5,4,4,2/2,5/3,3,4,2,2,1,1,1/6,6,4,2,2,1,1,1/6,6/0/3,6/0/2,2,2,2,2,2,2,2/6,6,6,4,4,5,5,5/5,5,5,5,5,5,5,5", fortune "3,7,1,4,7,8,5,5,2" and fortune indicator "0,0,0,2,0,2,0,0,0"
 	Then Three players join the game
 	
 	And Player 1 inspect new rolled dice
